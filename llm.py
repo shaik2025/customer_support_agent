@@ -5,7 +5,7 @@ import os
 
 load_dotenv()
 
-def get_llm(model: str = "gemini-2.5-flash-lite") -> BaseChatModel:
+def get_llm(model) -> BaseChatModel:
     return ChatGoogleGenerativeAI(
         model=model,
         google_api_key=os.getenv("GOOGLE_API_KEY")
