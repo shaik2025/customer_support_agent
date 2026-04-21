@@ -7,7 +7,7 @@ load_dotenv()
 
 def get_llm(model) -> BaseChatModel:
     return ChatGoogleGenerativeAI(
-        model=model,
+        model=os.getenv("MODEL"),
         google_api_key=os.getenv("GOOGLE_API_KEY")
     )
     
